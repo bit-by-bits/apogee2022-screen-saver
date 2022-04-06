@@ -1,2 +1,2 @@
 # screen-saver
-1024x768 resolution screen-saver design for APOGEE 2022
+A 1024px * 768px resolution screen-saver design for APOGEE 2022 using vanilla HTML and CSS.
