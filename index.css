@@ -1,0 +1,241 @@
+
+@font-face {
+    font-family: "Azonix";
+    src: local("Azonix"), url("Azonix.otf") format("opentype");
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    letter-spacing: 0.05em;
+    line-height: 100px;
+    font-size: 100px;
+    font-family: 'Azonix';
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.bgImg {
+    width: 1024px;
+    height: 768px;
+    position: fixed;
+    z-index: -1;
+}
+
+.top {
+    position: absolute;
+    top: 3.29px;
+    height: 35.2px;
+    width: 215.04px;
+    left: 404.429px;
+    animation: flicker 4.2s linear infinite;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 3.29px;
+    height: 35.2px;
+    width: 215.04px;
+    left: 404.429px;
+    animation: flicker 4.2s linear infinite;
+}
+
+.pink {
+    position: absolute;
+    top: 177.77px;
+    left: 73.66px;
+    height: 412.4467px;
+    width: 876.629px;
+    animation: flicker 2.1s linear infinite;
+}
+
+.blue {
+    position: absolute;
+    width: 960.62px;
+    height: 115.257px;
+    top: 323.205px;
+    left: 31.69px;
+    animation: flicker 3.2s linear infinite;
+}
+
+.appear {
+    width: 8.83px;
+    height: 15.03px;
+}
+
+.rightUpOne img,
+.rightDownOne img {
+    transform: rotate(180deg);
+}
+
+.leftUpOne {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    top: 12.01px;
+    left: 94.76px;
+}
+
+.rightUpOne {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    top: 12.01px;
+    right: 94.76px;
+}
+
+.leftDownOne {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    bottom: 12.01px;
+    left: 94.76px;
+}
+
+.rightDownOne {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    bottom: 12.01px;
+    right: 94.76px;
+}
+
+.arrows {
+    position: absolute;
+    height: 59.93px;
+    width: 6.42px;
+    animation: flicker 3s linear infinite;
+}
+
+.leftUpTwo {
+    top: 132.96px;
+    left: 6.64px;
+}
+
+.rightUpTwo {
+    top: 132.96px;
+    right: 6.64px;
+}
+
+.leftDownTwo {
+    transform: rotate(180deg);
+    bottom: 132.96px;
+    left: 6.64px;
+}
+
+.rightDownTwo {
+    transform: rotate(180deg);
+    bottom: 132.96px;
+    right: 6.64px;
+}
+
+.first {
+    animation: appear 2s linear infinite;
+}
+
+.second {
+    animation: appear 2s linear infinite;
+    animation-delay: 3s;
+}
+
+.third {
+    animation: appear 2s linear infinite;
+    animation-delay: 6s;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle img {
+    position: absolute;
+}
+
+.lay1 {
+    animation: circle 2s linear infinite;
+}
+
+.lay2 {
+    animation: circle 10s linear infinite reverse;
+}
+
+.lay4 {
+    animation: circle 5s linear infinite;
+}
+
+.lay3 {
+    animation: circle 8s linear infinite reverse;
+}
+
+.text {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    gap: 0.05em;
+}
+
+.year {
+    background: linear-gradient(to bottom right, rgb(7, 8, 220), rgb(180, 31, 251), rgb(250, 3, 149));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: .99;
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
